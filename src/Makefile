@@ -46,8 +46,7 @@ help:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILDDIR)/* ../_static ../_sources
-	rm -f ../*.html ../*.inv ../*.js
+	rm -rf $(BUILDDIR)/* ../_static ../_sources ../*.html ../*.inv ../*.js
 
 .PHONY: html
 html: clean

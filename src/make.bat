@@ -48,11 +48,11 @@ if "%1" == "clean" (
 	for /d %%i in (..\_sources\*) do rmdir /q /s %%i
 	for /d %%i in (..\_static\*) do rmdir /q /s %%i
 	del /q /s %BUILDDIR%\*
-	del /q /s ..\_sources
-	del /q /s ..\_static
-	del /q /s *.html
-	del /q /s *.inv
-	del /q /s *.js
+	rmdir /q /s ..\_sources
+	rmdir /q /s ..\_static
+	del /q /s ..\*.html
+	del /q /s ..\*.inv
+	del /q /s ..\*.js
 	goto end
 )
 
@@ -87,6 +87,8 @@ if "%1" == "html" (
 	echo.
 	echo.Build finished. The HTML pages are in %BUILDDIR%/html.
 	move %BUILDDIR%\html\* ..\.
+	move %BUILDDIR%\html\_sources ..\
+	move %BUILDDIR%\html\_static ..\
 	goto end
 )
 
