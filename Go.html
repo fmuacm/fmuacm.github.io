@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>GoLang &mdash; FMU ACM&#39;s Wiki 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="FMU ACM&#39;s Wiki 0.0.1 documentation" href="index.html"/>
+        <link rel="prev" title="Github" href="Github.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> FMU ACM's Wiki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Github.html">Github</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GoLang</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing">Installing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configure">Configure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running">Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building">Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-packages">Installing Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#format">Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-path">Import Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">FMU ACM's Wiki</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>GoLang</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Go.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="golang">
+<h1>GoLang<a class="headerlink" href="#golang" title="Permalink to this headline">¶</a></h1>
+<p>GoLang is a language inspired by other languages. It is a fairly new language. It will take a little bit of getting used to but the best part is you can cross compile. Like Java, it can run on many platforms. But unlike Java, you do not need a runtime to be installed on the machine you are executing the application on. The binary that is compiled is statically compiled meaning that no outside dependency libraries are required on the client machine.</p>
+<div class="section" id="installing">
+<h2>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
+<p>Installing GoLang is pretty straight forward. Follow the instructions at <a class="reference external" href="https://golang.org/doc/install">GoLang Install Docs</a>.</p>
+</div>
+<div class="section" id="configure">
+<h2>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h2>
+<p>This is where most people have an issue. You do have GoLang installed but your environment is not set up completely yet. You need to setup your <a class="reference external" href="https://golang.org/doc/code.html#Workspaces">GoLang Workspace</a>.</p>
+<p>After doing so you will need to set an environment variable named <cite>GOPATH</cite> so GoLang knows where everything is. It is recommended that you add <cite>$GOPATH/bin</cite> to your <cite>PATH</cite> as well. Read more about <cite>GOPATH</cite> at <a class="reference external" href="https://golang.org/doc/code.html#GOPATH">GoLang Gopath</a>.</p>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p>GoLang has a simple command called <cite>run</cite> that will compile your go program and run it. To do so run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">run</span> <span class="n">main</span><span class="o">.</span><span class="n">go</span>
+</pre></div>
+</div>
+<p>Of course, GoLang looks for the package <cite>main</cite> and the function <cite>main</cite> to find its entry point.</p>
+</div>
+<div class="section" id="building">
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
+<p>Building a binary in GoLang is as simple as calling:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">build</span> <span class="n">import</span><span class="o">/</span><span class="n">path</span>
+</pre></div>
+</div>
+<p>This will create a binary that has the name of the root directory.</p>
+</div>
+<div class="section" id="installing-packages">
+<h2>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h2>
+<p>GoLang has many packages built in. But if you want a package someone else made you simply run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">get</span> <span class="n">import</span><span class="o">/</span><span class="n">path</span>
+</pre></div>
+</div>
+<p>This assumes that the package is on GitHub by the user <cite>user</cite> and the repository <cite>package</cite>. This is great for developers to be able to create an open source package and distribute it with ease.</p>
+</div>
+<div class="section" id="format">
+<h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
+<p>GoLang comes with a nifty command called <cite>fmt</cite>. Run it by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">fmt</span> <span class="n">import</span><span class="o">/</span><span class="n">path</span>
+</pre></div>
+</div>
+<p>This will format your code to a standard. It is recommended running this before pushing to the repository so everyone is using the same formatting standards.</p>
+</div>
+<div class="section" id="import-path">
+<h2>Import Path<a class="headerlink" href="#import-path" title="Permalink to this headline">¶</a></h2>
+<p>Import path is how GitHub knows where to get the package from. Your local workspace mimics this by using folders under <cite>$GOPATH/src</cite>. But for you to be able to create a package you need to follow a rule. The path needs to be an URL to the package minus the protocol. Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fmuacm</span><span class="o">/</span><span class="n">alumniapp</span>     <span class="c1">#url</span>
+<span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fmuacm</span><span class="o">/</span><span class="n">alumniapp</span>                 <span class="c1">#import path</span>
+</pre></div>
+</div>
+<p>Using that convention go will know where to get the package if you do not already have that installed locally.</p>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://golang.org/doc/">GoLang Docs</a> has some great information on how to program in GoLang.</p>
+<p>I have found <a class="reference external" href="https://gobyexample.com/">Go By Example</a> really helpful when trying to figure out the proper syntax for certain tasks.</p>
+<p>There are a lot of videos on youtube with a few tutorials of GoLang! This <cite>Youtube GoLang Playlist</cite> seems to cover most of GoLang.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="Github.html" class="btn btn-neutral" title="Github" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, FMU ACM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

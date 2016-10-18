@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Git &mdash; FMU ACM&#39;s Wiki 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="FMU ACM&#39;s Wiki 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="Github" href="Github.html"/>
+        <link rel="prev" title="Welcome to FMU ACM’s Wiki’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> FMU ACM's Wiki
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configure">Configure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clone">Clone</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add">Add</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commit">Commit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#log">Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#push">Push</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull">Pull</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-and-merging">Branching and Merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Github.html">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Go.html">GoLang</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">FMU ACM's Wiki</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Git</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Git.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<p>Git is a distributed version control software to help a team cooperate and work together. The distributed part means that everyone has a copy of the full repository when working on it. Version controlled means all changes to the code are kept. This makes it simple to revert changes, see what has changed, and see who made the change. To get started you must install git on your computer.</p>
+<p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing Git</a></p>
+<div class="section" id="configure">
+<h2>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h2>
+<p>Before using git you should set two values in the config. We need to tell git what your name is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;John Doe&quot;</span>
+</pre></div>
+</div>
+<p>And what your email is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;John.Doe@example.org&quot;</span>
+</pre></div>
+</div>
+<p>This is so git knows who is making the changes when you commit something to a repository. Github uses these values to assign a GitHub user to a commit so it is recommended that you use the same email address you used for signing up to Github.</p>
+</div>
+<div class="section" id="clone">
+<h2>Clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h2>
+<p>To be able to contribute you must first do what is called clone the repository. This will copy the repository from somewhere and make a local copy for you to edit:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fmuacm</span><span class="o">/</span><span class="n">alumniapp</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>This should create a folder in your current working directory called <cite>alumniapp</cite>. If you change directory to that folder you should see all the files that are listed on the main <a class="reference external" href="https://github.com/fmuacm/alumniapp">alumniapp repository page</a>. To read more go to <a class="reference external" href="https://git-scm.com/docs/git-clone">Git-SCM Clone Docs</a>.</p>
+</div>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<p>So you have made some changes to your local repository. You will need to stage then commit your changes to your local repository so that git can keep track of them. If you do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">somefile</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>This will stage <cite>somefile.txt</cite> telling git there is a change I would like you to take note of. You can stage as many files as needed or just do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>This will tell git to stage all files. Git will look at every file and if it sees a change will stage it for you. To read more go to <a class="reference external" href="https://git-scm.com/docs/git-add">Git-SCM Add Docs</a>.</p>
+</div>
+<div class="section" id="commit">
+<h2>Commit<a class="headerlink" href="#commit" title="Permalink to this headline">¶</a></h2>
+<p>Staging tells git what you would like it to know about. Commiting is saying, these groups of changes are related and should be together. To commit your staged files do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span>
+</pre></div>
+</div>
+<p>This will open the command prompts default editor to ask for a commit message. Type in a nonempty commit message and save it. Your change is now committed to your local repository.</p>
+<p>If you would like to skip the editor part you can do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Some message&quot;</span>
+</pre></div>
+</div>
+<p>This will make the message of the commit <cite>Some message</cite>.</p>
+<p>Your message should be a short description of what change you made. Good examples</p>
+<ul class="simple">
+<li>Updated API reference</li>
+<li>Edited README</li>
+<li>Added LICENSE</li>
+<li>Updated Terms Of Use</li>
+</ul>
+<p>To read more go to <a class="reference external" href="https://git-scm.com/docs/git-commit">Git-SCM Commit Docs</a>.</p>
+</div>
+<div class="section" id="status">
+<h2>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>Status is a simple command that lets you know what the status of your repository is. Are there any changes that are not staged to be committed? Are there any staged files ready to be committed? Is your repository up to date with the originating repository? To answer these questions simply run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>It is recommended that this command is used often so you know the state of your local repository at all times. To read more go to <a class="reference external" href="https://git-scm.com/docs/git-status">Git-SCM Status Docs</a>.</p>
+</div>
+<div class="section" id="log">
+<h2>Log<a class="headerlink" href="#log" title="Permalink to this headline">¶</a></h2>
+<p>Log lists all the commits that have been applied to your working copy of the repository. It will display the hash of all the commits (a unique identifier) and the commit message of each one. Simply run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>To read more go to <a class="reference external" href="https://git-scm.com/docs/git-log">Git-SCM Log Docs</a>.</p>
+</div>
+<div class="section" id="push">
+<h2>Push<a class="headerlink" href="#push" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have committed your changes locally you would like for everyone else to have this change. You will need to push your changes to the originating repository. To do so do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>Things can get complicated here but this should work for the majority of the cases. To read more go to <a class="reference external" href="https://git-scm.com/docs/git-push">Git-SCM Push Docs</a>.</p>
+</div>
+<div class="section" id="pull">
+<h2>Pull<a class="headerlink" href="#pull" title="Permalink to this headline">¶</a></h2>
+<p>Either you have been away for a while, you want the latest and greatest, or you got an error when trying to push your changes to the originating repository and got an error. A simple fix is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p>This will get the latest changes from the originating repository and apply them to your local repository. You must not have any staged or unstaged changes (you can have commits that are not in the originating repository). Things can get complicated here as well but this should work for the majority of cases. To read more go to <a class="reference external" href="https://git-scm.com/docs/git-pull">Git-SCM Pull Docs</a>.</p>
+</div>
+<div class="section" id="branching-and-merging">
+<h2>Branching and Merging<a class="headerlink" href="#branching-and-merging" title="Permalink to this headline">¶</a></h2>
+<p>This is a more advanced topic of git but I would like to describe the concept. A branch is what it sounds like, a branch off of the main code base. This is so you do not have to worry about changes to the main code branch until you are ready. The idea being you need to work on a feature that will take many commits to accomplish. You would create a branch from the code base and start working. Once you have everything working, on your branch, the way it should, you should merge your changes on top of the new code base (as it has probably changed since you made the branch).</p>
+<p>A merge takes the changes not applied to your branch from the code base and tries to apply them. Git tries its best to resolve issues but sometimes it needs help. If a merge failed you can use <cite>git status</cite> to see which files need to be checked.</p>
+<p>After a merge, you should test your feature again and any affected areas to make sure it is still working with the updated code base applied.</p>
+<p>Some commands for branching and merging:</p>
+<dl class="docutils">
+<dt><cite>git branch branchName</cite></dt>
+<dd>Create a branch called <cite>branchName</cite></dd>
+<dt><cite>git checkout branchName</cite></dt>
+<dd>Change to the branch <cite>branchName</cite></dd>
+<dt><cite>git checkout -b branchName</cite></dt>
+<dd>Create a branch called <cite>branchName</cite> and change to it</dd>
+<dt><cite>git merge from into</cite></dt>
+<dd>merge the branch <cite>from</cite> into the branch <cite>into</cite></dd>
+</dl>
+<p>To read more go to <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">Git-SCM Branch and Merge Docs</a></p>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/doc">Git-SCM Docs</a> is a great place to learn more about git and the power it has.</p>
+<p>Codeschool has a great interactive tutorial called <a class="reference external" href="https://try.github.io">Try Git</a>.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Github.html" class="btn btn-neutral float-right" title="Github" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to FMU ACM’s Wiki’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, FMU ACM.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
