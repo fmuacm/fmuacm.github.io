@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to FMU ACM's Wiki!
-==========================================
+==========================
 
 Contents:
 
@@ -14,4 +14,5 @@ Contents:
    Git
    Github
    Go
+   Editors
 
